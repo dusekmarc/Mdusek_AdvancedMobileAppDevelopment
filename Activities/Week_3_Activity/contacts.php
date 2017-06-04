@@ -40,7 +40,7 @@
 									echo "Contact: " . $row["contact.contact"]. "<br>";
 									echo "Position: " . $row["contact.position"]. "<br>";
 									echo "Phone / Fax #:" . $row["location.phone_fax"]. "<br>";
-									echo "Email:" . $row["conact.email"]. "<br>";
+									echo "Email:" . $row["contact.email"]. "<br>";
 					    }
 					} else {
 					    echo "Sorry something went wrong.....Search another business";
