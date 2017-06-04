@@ -1,0 +1,10 @@
+CREATE TABLE `contact` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `contact` varchar(255) default NULL,
+  `company` varchar(255),
+  `email` varchar(255) default NULL,
+  `position` varchar(255) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `contact` (`contact`,`company`,`email`,`position`) VALUES ("Judith Stevens","Walmart","Maecenas.malesuada@Cumsociis.co.uk",""),("Nelle Howell","Fed Ex","lorem.lorem@acturpis.net","Distribution"),("Camille Hutchinson","Holiday","porttitor@ipsumnunc.net","Manager"),("Keely Downs","Fed Ex","rhoncus.Donec.est@noncursus.com",""),("Chase Adkins","Walmart","ut@fermentumvel.co.uk","Distribution"),("Aphrodite Hyde","Target","ut.molestie.in@Sedeu.edu","Advertising"),("Shellie Harper","Holiday","mus@justosit.edu","Sales"),("Cathleen Bender","Walmart","egestas.rhoncus.Proin@vulputateeuodio.com","Sales"),("Bo Russell","Target","amet.consectetuer.adipiscing@quismassaMauris.org","Manager"),("Yuli Weber","Fed Ex","in@ipsum.co.uk","Manager");

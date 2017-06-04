@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone" style="background-color:rgb(55,191,148)">
+  <div data-role="header" data-theme="b">
+    <h1>Expense Tracker</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h1><center>Welcome to Payback</center></h1>
+    <h5><center>Track your work expenses within this application for fast and accurate reimbursement.</center></h5>
+    <div>
+    <div class="logo"><center><img src="payback.png" width="200" height="200" alt=""/></center></div>
+    <div class="ui-grid-b">
+        <div class="ui-block-a">
+    	<a href="#signin" class="ui-btn ui-corner-all ui-icon-check ui-btn-icon-bottom" data-transition="pop">Sign In</a>
+    	<span><i><h5><center>Welcome back!</center></h5></i></span>
+    	</div>
+      	<div class="ui-block-b">
+    	<a href="#signup" class="ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-bottom" data-transition="pop">Sign Up</a>
+    	<span><i><h5><center>Join us!</center></h5></i></span>
+    	</div>
+      	<div class="ui-block-c">
+    	<a href="#help" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-bottom" data-transition="flow">Help</a>
+    	<span><i><h5><center>Get assistance.</center></h5></i></span>
+    	</div>
+    </div>
+    </div>
+    </div>
+    <br>
+  <div data-role="footer" data-theme="b">
+    <h1>Cha-Ching!!!</h1>
+  </div>
+</div>
+
+<div data-role="page" id="signin" style="background-color:rgb(55,191,148)">
+  <div data-role="header" data-theme="b">
+    <h1>Sign In</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h2>Sign in below with your user name and password</h2>
+    <form action="action_page.php">
+		<b>User Name:</b><br>
+		<input type="text" name="username" value="username"><br>
+		<b>Password:</b><br>
+		<input type="text" name="password" value="password"><br><br>
+	</form>
+	<a href="#pagethree" class="ui-btn ui-corner-all ui-icon-lock ui-btn-icon-left" data-transition="flip" >Submit</a>
+
+    <a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+  </div>
+ <div data-role="footer" data-theme="b">
+    <h1>Cha-Ching!!!</h1>
+ </div>
+</div>
+
+
+
+<div data-role="page" id="signup" style="background-color:rgb(55,191,148)">
+  <div data-role="header" data-theme="b">
+    <h1>Sign Up</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <center><h1>Create a business or user account</h1></center>
+    <center><h4>Let's join forces.  Get your business signed up by selecting the <b>Register your business</b> button below:</h4></center>
+    <a href="#pagetwo" class="ui-btn ui-corner-all ui-icon-action ui-btn-icon-left" data-transition="flip">Register your business</a>
+    <br>
+    <center><h4>Is your business already registered?  Create a user account to get started on your expense tracking:</h4></center>
+    <a href="#pagefour" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-left" data-transition="flip">Create a user account</a>
+	<br>
+    <a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+  </div>
+  <div data-role="footer" data-theme="b">
+    <h1>Cha-Ching!!!</h1>
+  </div>
+ </div>
+
+
+
+
+
+
+<div data-role="page" id="pagefour" style="background-color:rgb(55,191,148)">
+  <div data-role="header" data-theme="b">
+    <h1>Sign Up</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h1>Create a user account</h1>
+    <h2>Enter in the required information below and submit for approval:</h2>
+    <form action="action_page.php">
+		<b>First Name:</b><br>
+		<input type="text" name="First Name" value="First Name"><br>
+		<b>Last Name:</b><br>
+		<input type="text" name="Last Name" value="Last Name"><br>
+		<b>Email:</b><br>
+		<input type="text" name="Email" value="you@email.com"><br>
+		<b>Phone Number:</b><br>
+		<input type="text" name="Phone" value="555-555-5555"><br>
+		<b>Business Name:</b><br>
+		<input type="text" name="BusinessName" value="Business Name"><br>
+		<b>User Name:</b><br>
+		<input type="text" name="User Name" value="User Name"><br>
+		<b>Password:</b><br>
+		<input type="text" name="Password" value="Password">
+		<br>
+ 		<input type="submit" value="Submit">
+    </form>
+    <a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+  </div>
+  <div data-role="footer" data-theme="b">
+    <h1>Cha-Ching!!!</h1>
+  </div>
+ </div>
+
+<div data-role="page" id="help" style="background-color:rgb(55,191,148)">
+  <div data-role="header" data-theme="b">
+    <h1>Help</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h1>Review the steps below for getting started with Payback.</h1>
+		<ol>
+  		<h2><li>Click the Sign In button on the home page</li></h2>
+  		<h2><li>Enter in the required information such as: </li></h2>
+  			<ul>
+  				<li><b>First Name</b></li>
+  				<li><b>Last Name</b></li>
+  				<li><b>Email Address</b></li>
+  				<li><b>Phone</b></li>
+  				<li><b>User Name</b></li>
+  				<li><b>Password</b></li>
+  			</ul>
+  		<h2><li>Sign into your account by clicking the Sign In button</li></h2>
+	</ol>
+
+    <a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+ </div>
+  <div data-role="footer" data-theme="b">
+    <h1>Cha-Ching!!!</h1>
+  </div>
+</div>
+
+
+
+<div data-role="page" id="pagetwo" style="background-color:rgb(55,191,148)">
+    <div data-role="header" data-theme="b">
+      <h1>Let's work together</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+      <h2><center>Fill out the following information below to get your business setup for tracking.</center></h2>
+      <form>
+      <div data-role="content">
+  	  <h3>Enter the following information below:</h3>
+  	</div>
+  	<b>What is the size of your business?</b>
+  	<input type="date" class="date" data-value="2004-03-20" min="2004-02-20"/>
+
+  	<div datarole="fieldcontain">
+  	<fieldset data-role="controlgroup" data-type="vertical">
+  		<legend><b>Pick an option</b></legend>
+  		<input type="radio" name="radio1" id="radio2_0" value="">
+  		<label for="radio2_0">Small (0-10 people)</label>
+  		<input type="radio" name="radio1" id="radio2_1" value="">
+  		<label for="radio2_1">Medium (10-50 people)</label>
+  		<input type="radio" name="radio1" id="radio2_2" value="">
+  		<label for="radio2_2">Large (50+ people)</label>
+  	</fieldset>
+  	</div>
+  	<br>
+    <div>
+    <b>Business Name:</b><br>
+		<input type="text" name="Business Name" value="Business Name"><br>
+		<b>Address:</b><br>
+		<input type="text" name="Address" value="Address"><br>
+		<b>Customer Contact Name:</b><br>
+		<input type="text" name="Contact" value="Contact"><br>
+		<b>Phone Number:</b><br>
+		<input type="text" name="Phone" value="555-555-5555"><br>
+		<b>Email:</b><br>
+		<input type="text" name="Email" value="you@business.com"><br>
+    </div>
+    <div>
+      <fieldset data-role="controlgroup">
+        <legend>Choose what expense categories you would like to track:</legend>
+          <label for="Gas">Gas</label>
+          <input type="checkbox" name="expenseId" id="Gas" value="gas">
+          <label for="Food">Food</label>
+          <input type="checkbox" name="expenseId" id="Food" value="food">
+          <label for="Hotel">Hotel</label>
+          <input type="checkbox" name="expenseId" id="Hotel" value="hotel">
+          <label for="Travel">Travel</label>
+          <input type="checkbox" name="expenseId" id="Travel" value="travel">
+          <label for="Misc">Misc.</label>
+          <input type="checkbox" name="expenseId" id="Misc" value="misc">
+      </fieldset>
+    </div>
+  	<div datarole="fieldcontain">
+  		<label for="textarea"><b>Tell us more about your business:</b></label>
+  		<input type="text" name="textinput" value="" />
+      </div>
+      <input type="submit" value="Submit">
+      </form>
+      <br>
+      <a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+
+      <div data-role="footer" data-theme="b">
+      	<h1>Cha-Ching!!!</h1>
+   	</div>
+  </div>
+ </div>
+ 
+
+
+
+<div data-role="page" id="pagethree" style="background-color:rgb(55,191,148)">
+  <div data-role="header" data-theme="b">
+    <h1>Expense Tracker</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+  	<h1><center>Welcome back!</center></h1>
+    <h4><center>"Let's get tracking!</center></h4>
+    <form>
+    	<div data-role="content">
+	  <h3>Enter the following information below:</h3>
+	</div>
+	<b>Enter in the date of the expense:</b>
+	<input type="date" class="date" data-value="2004-03-20" min="2004-02-20"/>
+
+	<div datarole="fieldcontain">
+	<fieldset data-role="controlgroup" data-type="vertical">
+		<legend><b>Pick an option</b></legend>
+		<input type="radio" name="radio1" id="radio1_0" value="">
+		<label for="radio1_0">Gas</label>
+		<input type="radio" name="radio1" id="radio1_1" value="">
+		<label for="radio1_1">Food</label>
+		<input type="radio" name="radio1" id="radio1_2" value="">
+		<label for="radio1_2">Travel</label>
+		<input type="radio" name="radio1" id="radio1_3" value="">
+		<label for="radio1_3">Hotel</label>
+	</fieldset>
+	</div>
+	<br>
+	<div datarole="fieldcontain">
+		<label for="textarea"><b>Document any additional information here:</b></label>
+		<input type="text" name="textinput" value="" />
+    </div>
+    <input type="submit" value="Submit">
+    </form>
+    <br>
+    <a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+
+    <div data-role="footer" data-theme="b">
+    	<h1>Cha-Ching!!!</h1>
+ 	</div>
+  </div>
+  </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+CREATE TABLE `location` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `city` varchar(255),
+  `company` varchar(255),
+  `phone_fax` varchar(100) default NULL,
+  `address` varchar(255) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `location` (`city`,`company`,`phone_fax`,`address`) VALUES ("New Maryland","Fed Ex","1-811-391-7034","P.O. Box 839, 7152 Malesuada Rd."),("Lac Ste. Anne","Target","1-897-938-9469","6160 Lectus Avenue"),("Townsville","Walmart","1-530-527-0224","170-8485 Ac Ave"),("Åkersberga","Holiday","1-408-129-3470","9048 Tristique Av."),("Mesa","Target","1-574-689-1163","493-3462 Pellentesque Rd."),("Reyhanl?","Walmart","1-891-661-0690","9418 Non, Ave"),("Daman","Holiday","1-577-430-4071","Ap #373-2429 Sapien. Rd."),("Huasco","Fed Ex","1-904-148-5643","9400 Nibh. Avenue"),("Borchtlombeek","Walmart","1-928-998-6564","8923 Phasellus St."),("Penco","Target","1-537-420-2488","P.O. Box 562, 2164 A Rd.");
+
+
