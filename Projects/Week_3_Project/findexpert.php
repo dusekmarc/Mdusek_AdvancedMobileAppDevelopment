@@ -40,7 +40,7 @@
 									echo "Email:" . $row["project_contact.email"]. "<br><hr>";
 					    }
 					} else {
-					    echo "Oops....Please try search for another project.";
+					    echo "No experts found.  Please try search for another project.";
 					}
 
 					mysqli_close($conn);
