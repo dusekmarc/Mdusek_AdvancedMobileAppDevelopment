@@ -1,7 +1,6 @@
 <?php
-// This is an example of config.php
 $dbhost = 'us-cdbr-azure-southcentral-f.cloudapp.net';
-$dbuser = 'b943fa01545dee';
-$dbpass = 'eb878929';
-$dbname = 'mdusekactivityone';
+$dbuser = 'b45ce0a1558071';
+$dbpass = '8544e943';
+$dbname = 'mdusekprojectappdb';
 ?>
