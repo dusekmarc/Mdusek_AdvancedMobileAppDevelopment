@@ -1,7 +1,0 @@
-CREATE TABLE `material_price` (
-  `id` mediumint,
-  `item` varchar(255) default NULL,
-  `price_per_item` varchar(100) default NULL
-);
-
-INSERT INTO `material_price` (`id`,`item`,`price_per_item`) VALUES (1,"2x4's","$2.75"),(2,"Paint Brush","$3.00"),(3,"Hammer","$6.00"),(4,"Nails","$5.50"),(5,"Tape Measure","$12.00"),(6,"Wrench","$10.00"),(7,"Saw Horse","$35.00"),(8,"Paint","$19.16"),(9,"Table Saw","$150.00"),(10,"Screws","$12.00");
