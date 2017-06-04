@@ -51,5 +51,7 @@
 				<div data-role="footer" data-theme="b" style="background-color:rgb(133,87,85)">
 	  <h4>Marc Dusek 2017</h4>
 	</div>
+	</div>
+	</div>
 	</body>
 </html>
