@@ -13,9 +13,8 @@
 	<body>
 		<div id="page" data-role="page" data-theme="b" >
 	<div data-role="header" data-theme="b" style="background-color:rgb(133,87,85)">
-<h1>
-	Find experts related to your project!
-		</h1>	</div>
+
+<h1>Find experts related to your project!</h1>	</div>
 				<div data-role="content">
 
 
@@ -34,8 +33,8 @@
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
-					        echo "Project Name: " . $row["project_name"]. "<br>";
-					        echo "Item: " . $row["project_list.item"]. "<br>";
+					        		echo "Project Name: " . $row["project_list.project_name"]. "<br>";
+					       			echo "Item: " . $row["project_list.item"]. "<br>";
 									echo "Expert: " . $row["project_contact.contact_name"]. "<br>";
 									echo "Phone / Fax #:" . $row["project_contact.phone_fax"]. "<br>";
 									echo "Email:" . $row["project_contact.email"]. "<br><hr>";
