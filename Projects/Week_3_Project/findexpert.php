@@ -22,7 +22,7 @@
 					include 'config.php';
 					include 'opendb.php';
 
-					$project_name = (isset($_POST['project_name'])    ? $_POST['project_list.project_name']   : '');
+					$expert = (isset($_POST['project_name'])    ? $_POST['project_list.project_name']   : '');
 
 					$sql= "SELECT project_list.project_name, project_list.item, project_contact.contact_name, project_contact.phone_fax, project_contact.email
 					FROM project_list
