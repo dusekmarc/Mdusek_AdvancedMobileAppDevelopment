@@ -23,7 +23,7 @@
 					include 'config.php';
 					include 'opendb.php';
 
-					$conf_num = (isset($_POST['company'])    ? $_POST['company']   : '');
+					$company = (isset($_POST['company'])    ? $_POST['company']   : '');
 
 					$sql= "SELECT location.company, location.city, location.address, contact.contact, contact.position, location.phone_fax, conact.email,
 						FROM location
@@ -35,8 +35,8 @@
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
 									echo "Company: " . $row["location.company"]. "<br>";
-					        echo "City: " . $row["location.city"]. "<br>";
-					        echo "Address: " . $row["location.address"]. "<br>";
+					        		echo "City: " . $row["location.city"]. "<br>";
+					        		echo "Address: " . $row["location.address"]. "<br>";
 									echo "Contact: " . $row["contact.contact"]. "<br>";
 									echo "Position: " . $row["contact.position"]. "<br>";
 									echo "Phone / Fax #:" . $row["location.phone_fax"]. "<br>";
