@@ -25,7 +25,7 @@
 
 					$company = (isset($_POST['company'])    ? $_POST['company']   : '');
 
-					$sql= "SELECT location.company, location.city, location.address, contact.contact, contact.position, location.phone_fax, conact.email,
+					$sql= "SELECT location.company, location.city, location.address, contact.contact, contact.position, location.phone_fax, contact.email,
 						FROM location
 						JOIN contact on location.company = contact.company
 						WHERE company LIKE '$company' LIMIT 100";
@@ -43,7 +43,7 @@
 									echo "Email:" . $row["conact.email"]. "<br>";
 					    }
 					} else {
-					    echo "0 results";
+					    echo "Sorry something went wrong.....Search another business";
 					}
 
 					mysqli_close($conn);
