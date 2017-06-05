@@ -23,12 +23,12 @@
 					include 'config.php';
 					include 'opendb.php';
 
-					$company = (isset($_POST['company'])    ? $_POST['company']   : '');
+					$city = (isset($_POST['city'])    ? $_POST['city']   : '');
 
 					$sql= "SELECT location.company, location.city, location.address, contact.contact, contact.position, location.phone_fax, contact.email,
 						FROM location
 						JOIN contact on location.company = contact.company
-						WHERE company LIKE '$company' LIMIT 100";
+						WHERE city LIKE '$city' LIMIT 100";
 					$result = mysqli_query($conn, $sql);
 
 					if (mysqli_num_rows($result) > 0) {
