@@ -14,7 +14,7 @@
 		<div id="page" data-role="page" data-theme="b" >
 	<div data-role="header" data-theme="b" style="background-color:rgb(133,87,85)">
 <h1>
-	Find your project items
+	Questions about the materials?  Ask the experts!
 		</h1>	</div>
 				<div data-role="content">
 

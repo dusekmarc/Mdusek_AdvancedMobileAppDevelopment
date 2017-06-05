@@ -1,0 +1,10 @@
+CREATE TABLE `item_contact` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `contact_name` varchar(255) default NULL,
+  `phone_fax` varchar(100) default NULL,
+  `email` varchar(255) default NULL,
+  `item` varchar(255) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `item_contact` (`contact_name`,`phone_fax`,`email`,`item`) VALUES ("Destiny A. Cabrera","(603) 186-0726","sem.ut.cursus@duiin.org","Hammer"),("Jeremy E. Lamb","(683) 476-6193","varius.orci@Classaptent.edu","Nails"),("Jermaine N. Nielsen","(814) 635-7028","justo@idblandit.org","2x4's"),("Savannah A. Whitney","(155) 929-6298","dolor.sit@auctornunc.edu","Paint"),("Benjamin Y. Hodge","(290) 521-6300","varius.et.euismod@ut.ca","Wrench"),("Chastity N. Thornton","(667) 739-2318","arcu.Vestibulum@dui.edu","Saw Horse"),("Quon X. Flowers","(884) 187-8195","bibendum.Donec.felis@egetmetuseu.ca","Screws"),("Autumn M. Gill","(759) 362-7097","eleifend.nunc@duiaugue.org","Paint Brush"),("Honorato U. Brooks","(817) 898-4220","tincidunt.neque@diamloremauctor.co.uk","Tape Measure"),("Vivien X. Christensen","(755) 896-3110","Nullam.lobortis.quam@nullaDonec.net","Table Saw");
