@@ -39,7 +39,7 @@
 					        echo "Phone " . $row["phone"]. "<br>";
 									echo "Store " . $row["stores.store"]. "<br>";
 									echo "Class " . $row["type"]. "<br>";
-									echo "Store # " . $row["store_number"]. "<br>";
+									echo "Store # " . $row["store_number"]. "<br><hr>";
 					    }
 					} else {
 					    echo "Try Again";
