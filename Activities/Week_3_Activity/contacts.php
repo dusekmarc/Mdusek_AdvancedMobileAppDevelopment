@@ -27,7 +27,7 @@
 
 					$sql= "SELECT region_owner.location, region_owner.contact, region_owner.phone, stores.store, stores.type, stores.store_number
 						FROM region
-						JOIN store on region_owner.store = stores.store
+						JOIN stores on region_owner.store = stores.store
 						WHERE location LIKE '$location' LIMIT 100";
 					$result = mysqli_query($conn, $sql);
 
