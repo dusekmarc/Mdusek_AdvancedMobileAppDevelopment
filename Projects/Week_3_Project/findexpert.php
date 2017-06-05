@@ -24,7 +24,7 @@
 
 					$project_name = (isset($_POST['project_name'])    ? $_POST['project_name']   : '');
 
-					$sql= "SELECT project_list.project_name, project_list.item, project_contact.contact_name
+					$sql= "SELECT project_list.project_name, project_list.item, item_contact.contact_name
 					FROM project_list
 					JOIN item_contact on project_list.item = project_contact.item
 					WHERE project_name LIKE '$project_name'";
