@@ -23,27 +23,26 @@
 					include 'config.php';
 					include 'opendb.php';
 
-					$city = (isset($_POST['city'])    ? $_POST['city']   : '');
+					$location = (isset($_POST['location'])    ? $_POST['location']   : '');
 
-					$sql= "SELECT location.company, location.city, location.address, contact.contact, contact.position, location.phone_fax, contact.email,
-						FROM location
-						JOIN contact on location.company = contact.company
-						WHERE city LIKE '$city' LIMIT 100";
+					$sql= "SELECT region_owner.location, region_owner.contact, region_owner.phone, stores.store, stores.type, stores.store_number
+						FROM region
+						JOIN store on region_owner.store = stores.store
+						WHERE location LIKE '$location' LIMIT 100";
 					$result = mysqli_query($conn, $sql);
 
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
-									echo "Company: " . $row["location.company"]. "<br>";
-					        		echo "City: " . $row["location.city"]. "<br>";
-					        		echo "Address: " . $row["location.address"]. "<br>";
-									echo "Contact: " . $row["contact.contact"]. "<br>";
-									echo "Position: " . $row["contact.position"]. "<br>";
-									echo "Phone / Fax #:" . $row["location.phone_fax"]. "<br>";
-									echo "Email:" . $row["contact.email"]. "<br>";
+									echo "Location: " . $row["location"]. "<br>";
+					        echo "Contact " . $row["contact"]. "<br>";
+					        echo "Phone " . $row["phone"]. "<br>";
+									echo "Store " . $row["stores.store"]. "<br>";
+									echo "Class " . $row["type"]. "<br>";
+									echo "Store # " . $row["store_number"]. "<br>";
 					    }
 					} else {
-					    echo "Sorry something went wrong.....Search another business";
+					    echo "Try Again";
 					}
 
 					mysqli_close($conn);

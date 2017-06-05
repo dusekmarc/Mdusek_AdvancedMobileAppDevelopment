@@ -1,0 +1,11 @@
+CREATE TABLE `region_owner` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `contact` varchar(255) default NULL,
+  `phone` varchar(100) default NULL,
+  `location` varchar(100) default NULL,
+  `email` varchar(255) default NULL,
+  `store` varchar(255) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `region_owner` (`contact`,`phone`,`location`,`email`,`store`) VALUES ("Aiko W. Berger","1-890-395-8372","United States","ipsum.porta@enimMaurisquis.com","CVS"),("Griffith E. Moss","1-883-634-6269","United States","a.felis.ullamcorper@urnaVivamus.edu","Walmart"),("Summer W. Mcfadden","1-367-558-5039","Canada","ornare@sodaleselit.edu","Walmart"),("Demetria Q. Rodgers","1-819-475-2599","Canada","lorem.auctor@disparturient.net","Target"),("Jaden S. Hansen","1-546-646-9966","Europe","sit.amet@ametmetus.ca","CVS"),("Rudyard P. Stephenson","1-629-263-1549","Canada","leo@aliquamenim.com","CVS"),("Clark M. Mullins","1-987-897-4889","United States","velit@consequat.co.uk","Target"),("Nita S. Bass","1-887-170-4237","Canada","fermentum.arcu.Vestibulum@Duis.net","Target"),("Kimberley S. Webster","1-701-541-3501","Europe","eros.non.enim@Crasloremlorem.edu","Target"),("Kendall V. Lynch","1-686-480-6011","Europe","aliquam.enim.nec@aliquameros.net","CVS");
