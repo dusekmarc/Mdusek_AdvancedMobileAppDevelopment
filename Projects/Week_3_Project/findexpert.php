@@ -26,7 +26,7 @@
 
 					$sql= "SELECT project_list.project_name, project_list.item, project_contact.contact_name
 					FROM project_list
-					JOIN project_contact on project_list.project_name = project_contact.project_name
+					JOIN item_contact on project_list.item = project_contact.item
 					WHERE project_name LIKE '$project_name'";
 					$result = mysqli_query($conn, $sql);
 
