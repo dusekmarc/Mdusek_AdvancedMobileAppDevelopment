@@ -22,31 +22,28 @@
 					include 'config.php';
 					include 'opendb.php';
 
-					$expert = (isset($_POST['project_name'])    ? $_POST['project_name']   : '');
+					$project_name = (isset($_POST['project_name'])    ? $_POST['project_name']   : '');
 
-					$sql= "SELECT project_list.project_name, project_list.item, project_contact.contact_name, project_contact.phone_fax, project_contact.email
+					$sql= "SELECT project_list.project_name, project_list.item, project_contact.contact_name
 					FROM project_list
 					JOIN project_contact on project_list.project_name = project_contact.project_name
-					WHERE project_name LIKE '$expert'";
+					WHERE project_name LIKE '$project_name'";
 					$result = mysqli_query($conn, $sql);
 
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
-					        		echo "Project Name: " . $row["project_list.project_name"]. "<br>";
-					       			echo "Item: " . $row["project_list.item"]. "<br>";
-									echo "Expert: " . $row["project_contact.contact_name"]. "<br>";
-									echo "Phone / Fax #:" . $row["project_contact.phone_fax"]. "<br>";
-									echo "Email:" . $row["project_contact.email"]. "<br><hr>";
+					        		echo "Project Name: " . $row["project_name"]. "<br>";
+					        		echo "Item: " . $row["project_list.item"]. "<br>";
+									echo "Contact: " . $row["contact_name"]. "<br>";
 					    }
 					} else {
-					    echo "No experts found.  Please try search for another project.";
+					    echo "No Expert found.  Please try search for another project.";
 					}
 
 					mysqli_close($conn);
 
-					?>
-					<a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+					?>					<a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
 				<div data-role="footer" data-theme="b" style="background-color:rgb(133,87,85)">
 	  <h4>Marc Dusek 2017</h4>
 	</div>
