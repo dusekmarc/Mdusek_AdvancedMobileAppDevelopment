@@ -13,8 +13,9 @@
 	<body>
 		<div id="page" data-role="page" data-theme="b" >
 	<div data-role="header" data-theme="b" style="background-color:rgb(133,87,85)">
-
-<h1>Find experts related to your project!</h1>	</div>
+<h1>
+	Find your project items
+		</h1>	</div>
 				<div data-role="content">
 
 
@@ -24,30 +25,30 @@
 
 					$project_name = (isset($_POST['project_name'])    ? $_POST['project_name']   : '');
 
-					$sql= "SELECT project_list.project_name, project_list.item, item_contact.contact_name
+					$sql= "SELECT project_list.project_name, project_list.item, project_list.quantity, item_contact.contact_name
 					FROM project_list
-					JOIN item_contact on project_list.item = project_contact.item
+					JOIN item_contact on project_list.item = item_contact.item
 					WHERE project_name LIKE '$project_name'";
 					$result = mysqli_query($conn, $sql);
 
 					if (mysqli_num_rows($result) > 0) {
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
-					        		echo "Project Name: " . $row["project_name"]. "<br>";
-					        		echo "Item: " . $row["project_list.item"]. "<br>";
-									echo "Contact: " . $row["contact_name"]. "<br>";
+					        echo "Project Name: " . $row["project_name"]. "<br>";
+					        echo "Item: " . $row["project_list.item"]. "<br>";
+							echo "Price per item: " . $row["contact_name"]. "<br>";
+							echo "Quantity:" . $row["quantity"]. "<br><hr>";
 					    }
 					} else {
-					    echo "No Expert found.  Please try search for another project.";
+					    echo "Oops....Please try search for another project.";
 					}
 
 					mysqli_close($conn);
 
-					?>					<a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
+					?>
+					<a href="#pageone" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-left" data-transition="flip" style="background-color:rgb(192,192,192)" >Back to Home Page</a>
 				<div data-role="footer" data-theme="b" style="background-color:rgb(133,87,85)">
 	  <h4>Marc Dusek 2017</h4>
-	</div>
-	</div>
 	</div>
 	</body>
 </html>
