@@ -25,7 +25,7 @@
 
 					$project_name = (isset($_POST['project_name'])    ? $_POST['project_name']   : '');
 
-					$sql= "SELECT project_list.project_name, project_list.item, project_list.quantity, item_contact.contact_name
+					$sql= "SELECT project_list.project_name, project_list.item, item_contact.contact_name, item_contact.phone_fax, item_contact.email
 					FROM project_list
 					JOIN item_contact on project_list.item = item_contact.item
 					WHERE project_name LIKE '$project_name'";
@@ -35,9 +35,10 @@
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
 					        echo "Project Name: " . $row["project_name"]. "<br>";
-					        echo "Item: " . $row["project_list.item"]. "<br>";
-							echo "Price per item: " . $row["contact_name"]. "<br>";
-							echo "Quantity:" . $row["quantity"]. "<br><hr>";
+					        echo "Item: " . $row["item"]. "<br>";
+							echo "Contact Name: " . $row["contact_name"]. "<br>";
+							echo "Email: " . $row["email"]. "<br>";
+							echo "Phone/Fax:" . $row["phone_fax"]. "<br><hr>";
 					    }
 					} else {
 					    echo "Oops....Please try search for another project.";
