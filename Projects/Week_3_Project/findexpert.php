@@ -36,6 +36,7 @@
 					    while($row = mysqli_fetch_assoc($result)) {
 					        echo "Project Name: " . $row["project_name"]. "<br>";
 					        echo "Item: " . $row["item"]. "<br>";
+					        <br>
 							echo "Contact Name: " . $row["contact_name"]. "<br>";
 							echo "Email: " . $row["email"]. "<br>";
 							echo "Phone/Fax:" . $row["phone_fax"]. "<br><hr>";
