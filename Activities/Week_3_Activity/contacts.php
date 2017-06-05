@@ -35,11 +35,11 @@
 					    // output data of each row
 					    while($row = mysqli_fetch_assoc($result)) {
 									echo "Location: " . $row["location"]. "<br>";
-					        echo "Contact " . $row["contact"]. "<br>";
-					        echo "Phone " . $row["phone"]. "<br>";
-									echo "Store " . $row["store"]. "<br>";
-									echo "Class " . $row["type"]. "<br>";
-									echo "Store # " . $row["store_number"]. "<br><hr>";
+					        echo "Contact: " . $row["contact"]. "<br>";
+					        echo "Phone: " . $row["phone"]. "<br>";
+									echo "Store: " . $row["store"]. "<br>";
+									echo "Class: " . $row["type"]. "<br>";
+									echo "Store #: " . $row["store_number"]. "<br><hr>";
 					    }
 					} else {
 					    echo "Try Again";
